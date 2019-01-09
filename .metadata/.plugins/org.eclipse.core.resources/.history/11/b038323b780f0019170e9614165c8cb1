@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+using std::string;
+using std::vector;
+
+int main() {
+	std::string str;
+	std::vector<char> stack;
+	std::cin >> str;
+
+	for (unsigned int i = 0; i <= str.length(); i++) {
+		stack.push_back(str[i]);
+	}
+
+	std::cout << stack << std::endl;
+	//std::cout << str << std::endl;
+
+	return 0;
+}
+
+
+
+

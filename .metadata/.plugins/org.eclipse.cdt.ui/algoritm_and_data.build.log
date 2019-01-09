@@ -1,0 +1,25 @@
+14:30:33 **** Build of configuration Debug for project algoritm_and_data ****
+make all 
+Building file: ../vector_1.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"vector_1.d" -MT"vector_1.o" -o "vector_1.o" "../vector_1.cpp"
+Finished building: ../vector_1.cpp
+ 
+Building file: ../vector_2.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"vector_2.d" -MT"vector_2.o" -o "vector_2.o" "../vector_2.cpp"
+Finished building: ../vector_2.cpp
+ 
+Building target: algoritm_and_data
+Invoking: GCC C++ Linker
+g++  -o "algoritm_and_data"  ./vector_1.o ./vector_2.o   
+./vector_2.o: In function `operator new(unsigned long, void*)':
+/home/artem/eclipse-workspace/algoritm_and_data/Debug/../vector_2.cpp:8: multiple definition of `main'
+makefile:44: recipe for target 'algoritm_and_data' failed
+./vector_1.o:/home/artem/eclipse-workspace/algoritm_and_data/Debug/../vector_1.cpp:15: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [algoritm_and_data] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+14:30:38 Build Failed. 4 errors, 0 warnings. (took 4s.928ms)
+

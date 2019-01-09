@@ -1,0 +1,6 @@
+23:48:48 **** Incremental Build of configuration Debug for project number_sequence ****
+make all 
+make: Nothing to be done for 'all'.
+
+23:48:48 Build Finished. 0 errors, 0 warnings. (took 712ms)
+

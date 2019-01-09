@@ -1,0 +1,10 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+
+int main() {
+	std::vector<double> keys;
+	return 0;
+}

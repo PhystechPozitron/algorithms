@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+using std::string;
+using std::vector;
+
+int main() {
+	std::string str;
+	std::vector<double> vect;
+	str = "Start!";
+	std::cout << str << std::endl;
+
+	return 0;
+}
+
+
+
+

@@ -1,0 +1,104 @@
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+#include <ctime>
+
+void print(std::vector<double> &);
+void seq_to_vector(std::string &seq, std::vector<double> &v);
+
+// prototypes of sorts
+void selection_sort(std::vector<double> &);
+void bubble_sort(std::vector<double> &);
+void insertion_sort(std::vector<double> &);
+
+// functions
+int main() {
+	std::vector<double> keys_1, keys_2, keys_3;
+	unsigned int init_time,end_time;
+
+	// read input file
+	std::string seq;
+	std::ifstream in("data.txt");
+	if (in.is_open()) {
+		std::getline(in, seq);
+	}
+	seq_to_vector(seq, keys_1);
+	keys_2 = keys_1;
+	keys_3 = keys_1;
+
+	init_time = clock();
+	selection_sort(keys_1);
+	end_time = clock();
+	std::cout << "Selection sort: " << end_time - init_time << " ms" << std::endl;
+	init_time = clock();
+	bubble_sort(keys_2);
+	end_time = clock();
+	std::cout << "Bubble sort: " << end_time - init_time << " ms" << std::endl;
+	init_time = clock();
+	insertion_sort(keys_3);
+	end_time = clock();
+	std::cout << "Insertion sort: " << end_time - init_time << " ms" << std::endl;
+
+	print(keys_3);
+
+	return 0;
+}
+
+void print(std::vector<double> &v) {
+	for (auto it : v) {
+		std::cout << it << " ";
+	}
+	std::cout << std::endl;
+}
+
+void seq_to_vector(std::string &seq, std::vector<double> &v) {
+	std::istringstream iss(seq);
+	double a;
+	while (iss >> a) {
+		v.push_back(a);
+	}
+}
+
+void selection_sort(std::vector<double> &keys) {
+	unsigned int min_j = 0;
+	double a;
+	for (unsigned int i = 0; i < keys.size() - 1; i++) {
+		min_j = i;
+		for (unsigned int j = i + 1; j < keys.size(); j++) {
+			if (keys[j] < keys[min_j]) {
+				min_j = j;
+			}
+		}
+		a = keys[i];
+		keys[i] = keys[min_j];
+		keys[min_j] = a;
+	}
+}
+
+void bubble_sort(std::vector<double> &keys) {
+	double a;
+	for (unsigned int i = keys.size() - 1; i > 0; i--) {
+		for (unsigned int j = 0; j < i; j++) {
+			if (keys[j] > keys[j + 1]) {
+				a = keys[j];
+				keys[j] = keys[j + 1];
+				keys[j + 1] = a;
+			}
+		}
+	}
+}
+
+void insertion_sort(std::vector<double> &keys) {
+	double a;
+	for (unsigned int i = 1; i < keys.size(); i++) {
+		for (unsigned int j = i; (j > 0)&&(keys[j - 1] > keys[j]); j--) {
+			a = keys[j-1];
+			keys[j-1] = keys[j];
+			keys[j] = a;
+		}
+	}
+}
+

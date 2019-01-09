@@ -1,0 +1,15 @@
+23:54:08 **** Incremental Build of configuration Debug for project bracket_sequence ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: bracket_sequence
+Invoking: GCC C++ Linker
+g++  -o "bracket_sequence"  ./main.o   
+Finished building target: bracket_sequence
+ 
+
+23:54:09 Build Finished. 0 errors, 0 warnings. (took 1s.606ms)
+

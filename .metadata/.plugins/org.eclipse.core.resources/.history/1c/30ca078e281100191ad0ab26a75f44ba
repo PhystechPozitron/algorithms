@@ -1,0 +1,43 @@
+#include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+using std::string;
+using std::vector;
+
+bool more_then_top(std::vector<unsigned int>& stack, int a) {
+	return true;
+}
+
+int main() {
+	unsigned int n;
+	std::vector<int> input;
+	std::vector<unsigned int> output;
+	std::vector<unsigned int> stack;
+
+	// parse sequence to vector input
+	std::string line;
+	std::getline(std::cin, line);
+	n = std::stoi(line);
+	std::getline(std::cin, line);
+	std::istringstream iss(line);
+	int a;
+	while (iss >> a) {
+		input.push_back(a);
+	}
+
+	// algorithm
+	stack.push_back(0);
+	for (unsigned int i = 0; i < n; i++) {
+		while (more_than_top(stack, input[i])) {
+
+		}
+	};
+
+	return 0;
+}
+
+
+
+

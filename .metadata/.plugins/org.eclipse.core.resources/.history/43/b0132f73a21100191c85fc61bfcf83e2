@@ -1,0 +1,15 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+
+int main() {
+	std::vector<double> keys;
+
+	// read std::cin
+	std::string str;
+	std::getline(std::cin, str);
+
+	return 0;
+}

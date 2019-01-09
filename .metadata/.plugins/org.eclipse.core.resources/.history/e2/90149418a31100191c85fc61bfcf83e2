@@ -1,0 +1,34 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+
+void selection_sort(std::vector<double> &);
+void print(std::vector<double> &);
+
+int main() {
+	std::vector<double> keys;
+
+	// read std::cin
+	std::string str;
+	std::getline(std::cin, str);
+	std::istringstream iss(str);
+	double a;
+	while (iss >> a) {
+		keys.push_back(a);
+	}
+
+	selection_sort(keys);
+	print(keys);
+
+	return 0;
+}
+
+void print(std::vector<double> &v) {
+	for (auto it : v) {
+		std::cout << it << " ";
+	}
+	std::cout << std::endl;
+}
+

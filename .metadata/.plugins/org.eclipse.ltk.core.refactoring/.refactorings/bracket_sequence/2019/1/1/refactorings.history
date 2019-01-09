@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;bracket_sequence/vector_1.cpp&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;vector_1.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="vector_1.cpp" name="main.cpp" stamp="1546688596563" updateReferences="true"/>
+</session>

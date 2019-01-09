@@ -1,0 +1,69 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+
+void print(std::vector<double> &);
+void seq_to_vector(std::string &seq, std::vector<double> &v);
+
+// prototypes of sorts
+void selection_sort(std::vector<double> &);
+void bubble_sort(std::vector<double> &);
+void insertion_sort(std::vector<double> &);
+
+// functions
+int main() {
+	std::vector<double> keys;
+
+	// read std::cin
+	std::string seq;
+	std::getline(std::cin, seq);
+	seq_to_vector(seq, keys);
+	selection_sort(keys);
+	std::cout << "Selection sort:" << std::endl;
+	print(keys);
+
+	return 0;
+}
+
+void print(std::vector<double> &v) {
+	for (auto it : v) {
+		std::cout << it << " ";
+	}
+	std::cout << std::endl;
+}
+
+void seq_to_vector(std::string &seq, std::vector<double> &v) {
+	std::istringstream iss(seq);
+	double a;
+	while (iss >> a) {
+		v.push_back(a);
+	}
+}
+
+void selection_sort(std::vector<double> &keys) {
+	unsigned int min_j = 0;
+	double a;
+	for (unsigned int i = 0; i < keys.size() - 1; i++) {
+		min_j = i;
+		for (unsigned int j = i + 1; j < keys.size(); j++) {
+			if (keys[j] < keys[min_j]) {
+				min_j = j;
+			}
+		}
+		a = keys[i];
+		keys[i] = keys[min_j];
+		keys[min_j] = a;
+	}
+}
+
+void bubble_sort(std::vector<double> &keys) {
+
+
+}
+
+void insertion_sort(std::vector<double> &keys) {
+
+}
+

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+using std::string;
+using std::vector;
+
+bool types_equal(char a, char b) {
+	return true;
+}
+
+int main() {
+	std::string str;
+	std::vector<char> stack;
+	std::cin >> str;
+	int result;
+
+	for (unsigned int i = 0; i < str.length(); i++) {
+		if ((str[i] = '(')||(str[i] = '[')||(str[i] == '{')) {
+			stack.push_back(str[i]);
+		} else {
+			if types_equal(str[i], stack[])
+		}
+	}
+
+	//std::cout << str << std::endl;
+
+	return 0;
+}
+
+
+
+

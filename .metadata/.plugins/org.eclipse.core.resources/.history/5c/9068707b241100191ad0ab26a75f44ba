@@ -1,0 +1,39 @@
+#include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+using std::string;
+using std::vector;
+
+int main() {
+	unsigned int n;
+	std::vector<int> input;
+	std::vector<unsigned int> output;
+	std::vector<unsigned int> stack;
+
+	// parse sequence to vector input
+	std::string first, second;
+	std::getline(std::cin, first);
+	std::getline(std::cin, second);
+	std::cout << first << std::endl;
+	std::cout << second << std::endl;
+
+	n = std::stoi(first);
+	std::istringstream iss(second);
+	int a;
+	while (iss >> a) {
+		input.push_back(a);
+	}
+
+	for (auto number : input) {
+		std::cout << number << " ";
+	}
+	std::cout << std::endl;
+
+	return 0;
+}
+
+
+
+
